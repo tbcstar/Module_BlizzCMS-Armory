@@ -11,18 +11,18 @@
 				<article class="uk-article">
 				<div class="uk-card uk-card-default uk-card-body uk-margin-small">
 				<?php foreach($this->armory_model->getGuildInfo($MultiRealm, $guildid)->result() as $guild): ?>
-				<h2 style="display:inline;"> <?= $guild->name ?> |</h2><b style="display:inline;">   Mensaje:  </b><i style="display:inline;">"<?= $guild->motd ?>"</i>
+				<h2 style="display:inline;"> <?= $guild->name ?> |</h2><b style="display:inline;">   Message:  </b><i style="display:inline;">"<?= $guild->motd ?>"</i>
 				<hr>
 				<?php endforeach; ?>
-				<h2 class="uk-text-center"> Miembros</h2>
+				<h2 class="uk-text-center"> Members</h2>
 				<div class="uk-overflow-auto uk-margin-small">
 							<table class="uk-table dark-table uk-table-divider uk-table-small">
 								<thead>
 									<tr>
-										<th class="uk-table-expand uk-text-center">Nombre</th>
-										<th class="uk-table-expand uk-text-center">Nivel</th>
-										<th class="uk-table-expand uk-text-center">Raza</th>
-										<th class="uk-table-expand uk-text-center">Clase</th>
+										<th class="uk-table-expand uk-text-center">Name</th>
+										<th class="uk-table-expand uk-text-center">Level</th>
+										<th class="uk-table-expand uk-text-center">Race</th>
+										<th class="uk-table-expand uk-text-center">Class</th>
 									</tr>
 								<tbody>	
 								<?php foreach($this->armory_model->getGuildMembers($MultiRealm, $guildid)->result() as $player): ?>

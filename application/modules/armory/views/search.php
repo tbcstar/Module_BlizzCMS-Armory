@@ -28,7 +28,7 @@
 							</div>	
 							<input class="uk-button uk-button-default uk-width-1-1" type="submit" value="search">
 							<?= form_close(); ?>
-						<?php if (empty($_GET['search'])) {echo "No hay Busquedas recientes";} else {echo "Ultima Busqueda: " .$_GET['search'];}?>						
+						<?php if (empty($_GET['search'])) {echo "There are no recent searches";} else {echo "Last search: " .$_GET['search'];}?>						
 					</div>
 				</article>
 			</div>

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?= base_url().'application/modules/player/assets/css/player.css'; ?>" />  
   	<script> const whTooltips = {colorLinks: false, iconizeLinks: true, iconSize: 'large', renameLinks: false, dropchance: true}; </script>
-	<script src="https://wow.zamimg.com/widgets/power.js"></script>
+	<script type="text/javascript" src="https://wotlk.evowow.com/static/widgets/power.js"></script><script>var aowow_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
   <style>
   .item {
 	width:70px;
@@ -350,14 +350,14 @@
 				
 
 					<section id="armory_left">
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvHead($MultiRealm, $id)->result() as $head): ?><?= $head->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvNeck($MultiRealm, $id)->result() as $neck): ?><?= $neck->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvShoulders($MultiRealm, $id)->result() as $shoulders): ?><?= $shoulders->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvBack($MultiRealm, $id)->result() as $back): ?><?= $back->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvChest($MultiRealm, $id)->result() as $chest): ?><?= $chest->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvBody($MultiRealm, $id)->result() as $body): ?><?= $body->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvTabard($MultiRealm, $id)->result() as $tabard): ?><?= $tabard->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvWrists($MultiRealm, $id)->result() as $wrist): ?><?= $wrist->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvHead($MultiRealm, $id)->result() as $head): ?><?= $head->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvNeck($MultiRealm, $id)->result() as $neck): ?><?= $neck->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvShoulders($MultiRealm, $id)->result() as $shoulders): ?><?= $shoulders->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvBack($MultiRealm, $id)->result() as $back): ?><?= $back->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvChest($MultiRealm, $id)->result() as $chest): ?><?= $chest->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvBody($MultiRealm, $id)->result() as $body): ?><?= $body->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvTabard($MultiRealm, $id)->result() as $tabard): ?><?= $tabard->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvWrists($MultiRealm, $id)->result() as $wrist): ?><?= $wrist->item ?><?php endforeach ?>"></a></div>
 					</section>
 					<section id="armory_stats">
 					<center id="armory_stats_top">
@@ -372,11 +372,11 @@
 										<td><?= $info->health ?></td>
 									</tr>
 									<tr>
-										<td width="50%">Logros</td>
+										<td width="50%">Achievements</td>
 										<td><?= $this->armory_model->getLogros($MultiRealm, $id); ?></td>
 									</tr>
 									<tr>
-										<td width="50%">Muertes</td>
+										<td width="50%">Deaths</td>
 										<td><?= $info->totalKills ?></td>
 									</tr>
 									<tr>
@@ -396,20 +396,20 @@
 					</section>
 					</section>
 					<section id="armory_right">
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvHands($MultiRealm, $id)->result() as $hands): ?><?= $hands->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvWaist($MultiRealm, $id)->result() as $waist): ?><?= $waist->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvLegs($MultiRealm, $id)->result() as $legs): ?><?= $legs->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvFeet($MultiRealm, $id)->result() as $feet): ?><?= $feet->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvFingerOne($MultiRealm, $id)->result() as $fingerone): ?><?= $fingerone->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvFingerTwo($MultiRealm, $id)->result() as $fingertwo): ?><?= $fingertwo->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvTrinketOne($MultiRealm, $id)->result() as $trinketone): ?><?= $trinketone->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvTrinketTwo($MultiRealm, $id)->result() as $trinkettwo): ?><?= $trinkettwo->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvHands($MultiRealm, $id)->result() as $hands): ?><?= $hands->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvWaist($MultiRealm, $id)->result() as $waist): ?><?= $waist->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvLegs($MultiRealm, $id)->result() as $legs): ?><?= $legs->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvFeet($MultiRealm, $id)->result() as $feet): ?><?= $feet->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvFingerOne($MultiRealm, $id)->result() as $fingerone): ?><?= $fingerone->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvFingerTwo($MultiRealm, $id)->result() as $fingertwo): ?><?= $fingertwo->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvTrinketOne($MultiRealm, $id)->result() as $trinketone): ?><?= $trinketone->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvTrinketTwo($MultiRealm, $id)->result() as $trinkettwo): ?><?= $trinkettwo->item ?><?php endforeach ?>"></a></div>
 					</section>
 
 					<section id="armory_bottom">
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvMainHand($MultiRealm, $id)->result() as $mainhand): ?><?= $mainhand->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvOffHand($MultiRealm, $id)->result() as $offhand): ?><?= $offhand->item ?><?php endforeach ?>"></a></div>
-						<div class="item"><a href="#" data-wowhead="item=<?php foreach($this->armory_model->getCharInvRanged($MultiRealm, $id)->result() as $ranged): ?><?= $ranged->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvMainHand($MultiRealm, $id)->result() as $mainhand): ?><?= $mainhand->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvOffHand($MultiRealm, $id)->result() as $offhand): ?><?= $offhand->item ?><?php endforeach ?>"></a></div>
+						<div class="item"><a href="#" rel="item=<?php foreach($this->armory_model->getCharInvRanged($MultiRealm, $id)->result() as $ranged): ?><?= $ranged->item ?><?php endforeach ?>"></a></div>
 					</section>
 				</section>
 				</div>

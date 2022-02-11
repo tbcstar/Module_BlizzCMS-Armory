@@ -80,8 +80,8 @@
 							<table class="uk-table dark-table uk-table-divider uk-table-small">
 								<thead>
 									<tr>
-										<th class="uk-table-expand uk-text-center">Nombre</th>
-										<th class="uk-table-expand uk-text-center">Mensaje de Hermandad</th>
+										<th class="uk-table-expand uk-text-center">Name</th>
+										<th class="uk-table-expand uk-text-center">Guild message</th>
 									</tr>
 								<tbody>	
 								<?php foreach($this->armory_model->searchguild($MultiRealm, $search)->result() as $guild): ?>
