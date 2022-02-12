@@ -18,7 +18,7 @@
 										<td><input class="uk-input" style="display:inline;" id="search" name="search" type="text" placeholder="Search by Player Name or Guild Name" required></td>
 										<td><select class="uk-inline uk-input"style="display:inline;" id="realm" name="realm">
 											<?php foreach ($realms as $realm): ?>
-												<option value="<?= $realm->realmID ?> "><?= $this->wowrealm->getRealmName($realm->realmID); ?></option>
+												<option value="<?= $realm->realmID ?>"><?= $this->wowrealm->getRealmName($realm->realmID); ?></option>
 											<?php endforeach; ?>
 										</select></td>
 									</tr>
