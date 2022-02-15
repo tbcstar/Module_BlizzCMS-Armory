@@ -327,10 +327,10 @@
 					<table class="uk-table dark-table uk-table-divider uk-table-small">
 						<thead>
 							<tr>
-								<th class="uk-table-expand uk-text-center"> Nombre</th>
-								<th class="uk-table-expand uk-text-center"> Nivel</th>
-								<th class="uk-table-expand uk-text-center"> Raza</th>
-								<th class="uk-table-expand uk-text-center"> Clase</th>
+								<th class="uk-table-expand uk-text-center">Name</th>
+								<th class="uk-table-expand uk-text-center">Level</th>
+								<th class="uk-table-expand uk-text-center">Race</th>
+								<th class="uk-table-expand uk-text-center">Class</th>
 							</tr>
 						</thead>
 						<tbody>	
@@ -418,6 +418,4 @@
           </div>
         </article>
       </div>
-	<a href="https://www.zuldazar-realms.tk"style="display:inline;"></a>
-	<a href="https://www.asmodeosnetworkco.tk/"style="display:inline;"></a>
     </section>

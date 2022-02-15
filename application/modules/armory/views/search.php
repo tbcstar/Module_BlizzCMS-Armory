@@ -18,7 +18,7 @@
 										<td><input class="uk-input" style="display:inline;" id="search" name="search" type="text" placeholder="Search by Player Name or Guild Name" required></td>
 										<td><select class="uk-inline uk-input"style="display:inline;" id="realm" name="realm">
 											<?php foreach ($realms as $realm): ?>
-												<option value="<?= $realm->realmID ?> "><?= $this->wowrealm->getRealmName($realm->realmID); ?></option>
+												<option value="<?= $realm->realmID ?>"><?= $this->wowrealm->getRealmName($realm->realmID); ?></option>
 											<?php endforeach; ?>
 										</select></td>
 									</tr>
@@ -34,8 +34,6 @@
 			</div>
 		</div>
 	</div>
-	<a href="https://www.zuldazar-realms.tk"style="display:inline;"></a>
-	<a href="https://www.asmodeosnetworkco.tk/"style="display:inline;"></a>
 </section>
 <script>
       function SearchArmoryForm(e) {
@@ -88,7 +86,7 @@
                 'theme': 'awesome ok',
                   'content': {
                   title: '<?= $this->lang->line('notification_title_success'); ?>',
-                  message: 'Busqueda Realizada',
+                  message: 'Search Done',
                   info: '',
                   icon: 'fas fa-check-circle'
                 },
