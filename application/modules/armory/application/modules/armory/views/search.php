@@ -34,8 +34,6 @@
 			</div>
 		</div>
 	</div>
-	<a href="https://www.zuldazar-realms.tk"style="display:inline;"></a>
-	<a href="https://www.asmodeosnetworkco.tk/"style="display:inline;"></a>
 </section>
 <script>
       function SearchArmoryForm(e) {
@@ -88,7 +86,7 @@
                 'theme': 'awesome ok',
                   'content': {
                   title: '<?= $this->lang->line('notification_title_success'); ?>',
-                  message: 'Busqueda Realizada',
+                  message: 'Search Done',
                   info: '',
                   icon: 'fas fa-check-circle'
                 },

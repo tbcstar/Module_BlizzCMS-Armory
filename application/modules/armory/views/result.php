@@ -22,7 +22,7 @@
 										<td><input class="uk-input" style="display:inline;" id="search" name="search" type="text" placeholder="Search by Player Name or Guild Name" required></td>
 										<td><select class="uk-inline uk-input"style="display:inline;" id="realm" name="realm">
 											<?php foreach ($realms as $realm): ?>
-												<option value="<?= $realm->realmID ?>"><?= $this->wowrealm->getRealmName($realm->realmID); ?></option>
+												<option value="<?= $realm->realmID ?> "><?= $this->wowrealm->getRealmName($realm->realmID); ?></option>
 											<?php endforeach; ?>
 										</select></td>
 									</tr>
@@ -32,7 +32,7 @@
 							</div>	
 							<input class="uk-button uk-button-default uk-width-1-1" type="submit" value="search">
 							<?= form_close(); ?>
-						<?php if (empty($_GET['search'])) {echo "There are no recent searches";} else {echo "Last Search: " .$_GET['search'];}?>						
+						<?php if (empty($_GET['search'])) {echo "No hay Busquedas recientes";} else {echo "Ultima Busqueda: " .$_GET['search'];}?>						
 					</div>
 				</article>
 			</div>
@@ -55,9 +55,9 @@
 								<thead>
 									<tr>
 										<th class="uk-table-expand uk-text-center">Player</th>
-										<th class="uk-table-expand uk-text-center">Race</th>
-										<th class="uk-table-expand uk-text-center">Class</th>
-										<th class="uk-table-expand uk-text-center">Level</th>
+										<th class="uk-table-expand uk-text-center">Raza</th>
+										<th class="uk-table-expand uk-text-center">Clase</th>
+										<th class="uk-table-expand uk-text-center">Nivel</th>
 									</tr>
 								<tbody>	
 								<?php foreach($this->armory_model->searchchar($MultiRealm, $search)->result() as $player): ?>
@@ -71,6 +71,8 @@
 								</tbody>
 								</thead>
 							</table>
+							<a href="https://zuldazar-realms.tk"></a>
+							<a href="https://www.asmodeosnetworkco.tk"></a>
 							</div>
 						</div>
 						<div id="Guilds" class="city" style="display:none">
@@ -91,6 +93,8 @@
 								</tbody>
 								</thead>
 							</table>
+							<a href="https://zuldazar-realms.tk"></a>
+							<a href="https://www.asmodeosnetworkco.tk"></a>
 							</div>
 						</div>
 					</div>
@@ -161,7 +165,7 @@
                 'theme': 'awesome ok',
                   'content': {
                   title: '<?= $this->lang->line('notification_title_success'); ?>',
-                  message: 'Search Complete',
+                  message: 'Busqueda Realizada',
                   info: '',
                   icon: 'fas fa-check-circle'
                 },

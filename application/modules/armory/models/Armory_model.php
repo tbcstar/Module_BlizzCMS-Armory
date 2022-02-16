@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+//defined('BASEPATH') OR exit('No direct script access allowed');
 
 class armory_model extends CI_Model
 {
@@ -12,118 +12,194 @@ class armory_model extends CI_Model
 		$this->multirealm = $MultiRealm;
         return $this->multirealm->select('*')->where('guid',$id)->get('characters');
     }
-	public function getCharInvHead($MultiRealm, $id)
+    public function getCharInvHead($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','0')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '0');
+        return $this->multirealm->get();
     }
 
     public function getCharInvNeck($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','1')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '1');
+        return $this->multirealm->get();
     }
 
     public function getCharInvShoulders($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','2')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '2');
+        return $this->multirealm->get();
     }
 
     public function getCharInvBody($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','3')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '3');
+        return $this->multirealm->get();
     }
 
     public function getCharInvChest($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','4')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '4');
+        return $this->multirealm->get();
     }
 
     public function getCharInvWaist($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','5')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '5');
+        return $this->multirealm->get();
     }
 
     public function getCharInvLegs($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','6')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '6');
+        return $this->multirealm->get();
     }
 
     public function getCharInvFeet($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','7')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '7');
+        return $this->multirealm->get();
     }
 
     public function getCharInvWrists($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','8')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '8');
+        return $this->multirealm->get();
     }
 
     public function getCharInvHands($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','9')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '9');
+        return $this->multirealm->get();
     }
 
     public function getCharInvFingerOne($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','10')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '10');
+        return $this->multirealm->get();
     }
 
     public function getCharInvFingerTwo($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','11')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '11');
+        return $this->multirealm->get();
     }
 
     public function getCharInvTrinketOne($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','12')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '12');
+        return $this->multirealm->get();
     }
 
     public function getCharInvTrinketTwo($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','13')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '13');
+        return $this->multirealm->get();
     }
 
     public function getCharInvBack($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','14')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '14');
+        return $this->multirealm->get();
     }
 
     public function getCharInvMainHand($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','15')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '15');
+        return $this->multirealm->get();
     }
 
     public function getCharInvOffHand($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','16')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '16');
+        return $this->multirealm->get();
     }
 
     public function getCharInvRanged($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','17')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '17');
+        return $this->multirealm->get();
     }
 
     public function getCharInvTabard($MultiRealm, $id)
     {
-		$this->multirealm = $MultiRealm;
-        return $this->multirealm->select('item')->where('guid',$id)->where('bag','0')->where('slot','18')->get('character_inventory');
+        $this->multirealm = $MultiRealm;
+        $this->multirealm->select('itemEntry');
+        $this->multirealm->from('character_inventory a');
+        $this->multirealm->join('item_instance b', 'a.item = b.guid', 'left');
+        $this->multirealm->where('a.guid', $id)->where('a.bag', '0')->where('a.slot', '18');
+        return $this->multirealm->get();
     }
 	public function searchchar($MultiRealm, $search)
     {

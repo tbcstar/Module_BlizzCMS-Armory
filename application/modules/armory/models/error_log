@@ -1,0 +1,4 @@
+[15-Feb-2022 20:15:35 America/Denver] PHP Fatal error:  Uncaught Error: Class 'CI_Model' not found in /home/thecorecraft/theegn.com/application/modules/armory/models/Armory_model.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/thecorecraft/theegn.com/application/modules/armory/models/Armory_model.php on line 4
