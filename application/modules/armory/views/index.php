@@ -5,7 +5,7 @@
 		"colorlinks": true,
 		"iconizelinks": true,
 		"renamelinks": true,
-		iconSize: 'large'
+		"iconSize": "large"
 	}
 </script>
 <style>
