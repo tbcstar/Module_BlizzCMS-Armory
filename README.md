@@ -5,10 +5,10 @@ Module for the BlizzCMS
 
 # Characteristics
 - Displays the items that carries a character.
-- Visualize the members of a Brotherhood.
+- See members of guilds.
 # Installation
-- Copy to application/modules/armory folder
-- Opens the application/config/routes.php file and add these lines at the end:
+- Copy to `application/modules/armory` folder
+- Open the `application/config/routes.php` file and add these lines at the end:
 
 ```
 /*armory*/
@@ -19,7 +19,9 @@ $route[$lang.'/armory/guild/(:num)'] = 'armory/guild/$2';
 ```
 
 - Enjoy your module
-- to visualize it, enter `https://www.theegn.com/en/armory`
+- See an example here, enter `https://www.theegn.com/en/armory`
+
+
 # Live Demo
 
 - [Empire Gaming Armory](https://www.theegn.com/en/armory "Omega Empire")
@@ -36,6 +38,5 @@ $route[$lang.'/armory/guild/(:num)'] = 'armory/guild/$2';
 - [WoW CMS Developers](https://wow-cms.com "BlizzCMS")
 - [WoW CMS Discord Members](https://discord.gg/vZG9vpS "WoW CMS Discord Members")
 - [Empire Gaming](https://www.theegn.com/ "Empire Gaming")
-
-# Sponsor us
+- [AsmodeosNetwork - No longer maintained](https://github.com/AsmodeosNetworkCO/Module_BlizzCMS-streams "AsmodeosNetwork - No longer maintained")
 
