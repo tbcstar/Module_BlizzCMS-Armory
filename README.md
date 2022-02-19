@@ -38,5 +38,5 @@ $route[$lang.'/armory/guild/(:num)'] = 'armory/guild/$2';
 - [WoW CMS Developers](https://wow-cms.com "BlizzCMS")
 - [WoW CMS Discord Members](https://discord.gg/vZG9vpS "WoW CMS Discord Members")
 - [Empire Gaming](https://www.theegn.com/ "Empire Gaming")
-- [AsmodeosNetwork - No longer maintained](https://github.com/AsmodeosNetworkCO/Module_BlizzCMS-streams "AsmodeosNetwork - No longer maintained")
+- [AsmodeosNetwork - No longer maintained](https://github.com/AsmodeosNetworkCO/Module_BlizzCMS-Armory "AsmodeosNetwork - No longer maintained")
 
