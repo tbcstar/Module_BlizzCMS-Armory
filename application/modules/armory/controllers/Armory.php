@@ -1,14 +1,25 @@
 <?php 
-
+/**
+ * BlizzCMS
+ *
+ * @author WoW-CMS
+ * @copyright Copyright (c) 2019 - 2022, WoW-CMS (https://wow-cms.com)
+ * @license https://opensource.org/licenses/MIT MIT License
+ */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class armory extends MX_Controller {
-
+class armory extends BS_Controller
+{
     public function __construct()
     {
          parent::__construct();
-		 $this->load->model('armory_model');
+        is_module_installed('armory', true);
+
+        $this->load->model('armory_model');
+
+        $this->load->language('armory');
     }
+
 	public function search()
     {
         $data = array(
@@ -17,18 +28,18 @@ class armory extends MX_Controller {
 			'realms' => $this->wowrealm->getRealms()->result()
         );
         $this->template->build('search', $data);
-    }	
-	public function index($id)
+    }
+	
+	public function index()
     {
-        if (empty($id) || is_null($id) || $id == NULL)
-            redirect(base_url(),'refresh');
+        require_permission('view.armory');
 
-        $data = array(
-			'id' => $id,
-			'pagetitle' => 'Player Armory',
-			'lang' => $this->lang->lang(),
-			'realms' => $this->wowrealm->getRealms()->result()
-        );
+        $data = [
+            'realms' => $this->realm_model->find_all()
+        ];
+
+        $this->template->title(lang('Player Armory'), config_item('app_name'));
+
         $this->template->build('index', $data);
     }
 	public function guild($guildid)
